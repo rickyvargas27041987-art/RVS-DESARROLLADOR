@@ -530,3 +530,65 @@ footer p { color:#536478; font-size:10px; text-align:right; }
   }
 }
 .brand-mark::before{display:none!important}.brand-mark{padding-left:0!important;font-size:38px!important;font-weight:950!important;font-style:italic!important;letter-spacing:-0.08em!important;color:#ffffff!important;text-shadow:0 0 18px rgba(98,245,196,.16)!important}.brand-copy strong{font-size:13px!important;font-weight:800!important;letter-spacing:.22em!important;color:#ffffff!important}.brand-copy small{color:#78988d!important}
+
+/* ===== LOGO SVG OFICIAL RVS ===== */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-logo-svg {
+  display: block;
+  width: 112px;
+  height: auto;
+  flex: 0 0 auto;
+  overflow: visible;
+  filter:
+    drop-shadow(0 0 1px rgba(255,255,255,.22))
+    drop-shadow(0 0 11px rgba(32,217,157,.16));
+  transform: translateZ(0);
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1;
+}
+
+.brand-copy strong {
+  color: #F7FFFC !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+  letter-spacing: .22em !important;
+}
+
+.brand-copy small {
+  color: #86A79C !important;
+  font-size: 10px !important;
+  letter-spacing: .08em !important;
+}
+
+.footer-brand .brand-logo-svg {
+  width: 102px;
+}
+
+@media (max-width: 680px) {
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-logo-svg {
+    width: 92px;
+  }
+
+  .brand-copy strong {
+    font-size: 10px !important;
+    letter-spacing: .17em !important;
+  }
+
+  .brand-copy small {
+    font-size: 8px !important;
+  }
+}

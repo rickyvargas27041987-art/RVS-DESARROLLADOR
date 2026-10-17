@@ -1,0 +1,36 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 82" role="img" aria-labelledby="title desc">
+  <title id="title">RVS</title>
+  <desc id="desc">Logo RVS Desarrollador</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#8BFFD6"/>
+      <stop offset="1" stop-color="#20D99D"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-100%" width="180%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- RVS principal -->
+  <text x="6" y="57"
+        fill="#F7FFFC"
+        font-family="Arial Black, Segoe UI, Arial, sans-serif"
+        font-size="66"
+        font-style="italic"
+        font-weight="900"
+        letter-spacing="-7">RVS</text>
+
+  <!-- Firma verde integrada debajo de R/V, no delante del logo -->
+  <path d="M20 68 L92 68 L111 58 L69 72 L20 72 Z"
+        fill="url(#g)"
+        filter="url(#glow)"/>
+
+  <!-- PequeÃ±o corte tecnolÃ³gico -->
+  <path d="M152 64 L201 64 L214 57 L176 70 L152 70 Z"
+        fill="#20D99D"
+        opacity=".82"/>
+</svg>
