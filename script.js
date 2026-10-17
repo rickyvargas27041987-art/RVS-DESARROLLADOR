@@ -1,12 +1,12 @@
-const SETTINGS = {
-  // Reemplazá estos valores antes de publicar.
-  // WhatsApp: código de país + número, sin +, espacios ni guiones.
-  whatsappNumber: "549XXXXXXXXXX",
+﻿const SETTINGS = {
+  // ReemplazÃ¡ estos valores antes de publicar.
+  // WhatsApp: cÃ³digo de paÃ­s + nÃºmero, sin +, espacios ni guiones.
+  whatsappNumber: "542236955735",
   instagramUrl: "https://instagram.com/",
 };
 
 const message =
-  "Hola RVS Desarrollador, tengo una idea/proyecto y me gustaría consultar.";
+  "Hola RVS Desarrollador, tengo una idea/proyecto y me gustarÃ­a consultar.";
 
 const whatsappButton = document.getElementById("whatsappButton");
 const instagramButton = document.getElementById("instagramButton");
@@ -20,7 +20,7 @@ if (whatsappButton) {
   if (!configured) {
     whatsappButton.addEventListener("click", (event) => {
       event.preventDefault();
-      alert("Antes de publicar, completá tu número de WhatsApp en script.js.");
+      alert("Antes de publicar, completÃ¡ tu nÃºmero de WhatsApp en script.js.");
     });
   }
 }
@@ -66,3 +66,4 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
