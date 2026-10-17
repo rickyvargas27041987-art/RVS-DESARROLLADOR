@@ -2,7 +2,7 @@
   // ReemplazÃ¡ estos valores antes de publicar.
   // WhatsApp: cÃ³digo de paÃ­s + nÃºmero, sin +, espacios ni guiones.
   whatsappNumber: "542236955735",
-  instagramUrl: "https://instagram.com/",
+  instagramUrl: "https://instagram.com/rvsdesarrollador/",
 };
 
 const message =
@@ -66,4 +66,5 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
 
