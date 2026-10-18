@@ -54,6 +54,39 @@ document.querySelectorAll(".js-general-quote").forEach((button) => {
   });
 });
 
+
+/* ===== SERVICIOS ADMINISTRADOS RVS ===== */
+function serviceGuide(service = "", price = "") {
+  return `Hola RVS Desarrollador
+
+Quiero consultar por un servicio adicional.
+
+Servicio: ${service}
+Valor orientativo: ${price}
+
+Mis datos:
+
+1. Nombre / empresa:
+2. Rubro o actividad:
+3. Ciudad / localidad:
+4. Ya tengo una web o sistema? Si / No
+5. Dominio actual, si tengo:
+6. Que necesito resolver?
+7. Cantidad aproximada de usuarios o cuentas:
+8. Otros comentarios:
+
+Gracias.`;
+}
+
+document.querySelectorAll(".js-service-whatsapp").forEach((button) => {
+  button.addEventListener("click", () => {
+    const service = button.dataset.service || "";
+    const price = button.dataset.price || "";
+    openWhatsApp(serviceGuide(service, price));
+  });
+});
+
+
 const instagramButton = document.getElementById("instagramButton");
 
 if (instagramButton) {
