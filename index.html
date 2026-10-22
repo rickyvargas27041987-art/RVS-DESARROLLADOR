@@ -229,391 +229,106 @@
 
 
 
-    <!-- ===== FERROVENTAS ===== -->
+    <!-- ===== FERROVENTAS · PRESENTACIÓN COMERCIAL ACTUALIZADA ===== -->
     <style>
-      .ferroventas-section{
-        padding-top:110px;
-        padding-bottom:120px
-      }
-
-      .ferroventas-shell{
-        display:grid;
-        grid-template-columns:minmax(0,1.35fr) minmax(330px,.65fr);
-        gap:20px
-      }
-
-      .ferroventas-copy,
-      .ferroventas-offer{
-        border:1px solid var(--line);
-        border-radius:28px;
-        background:
-          radial-gradient(circle at 100% 0%,
-          rgba(239,68,68,.11),transparent 20rem),
-          rgba(255,255,255,.014);
-        box-shadow:0 28px 80px rgba(0,0,0,.23)
-      }
-
-      .ferroventas-copy{
-        padding:42px
-      }
-
-      .ferroventas-brand{
-        display:flex;
-        align-items:center;
-        gap:14px
-      }
-
-      .ferroventas-mark{
-        width:58px;
-        height:58px;
-        display:grid;
-        place-items:center;
-        border-radius:16px;
-        background:linear-gradient(145deg,#ef4444,#991b1b);
-        color:#fff;
-        font-size:19px;
-        font-weight:950;
-        box-shadow:0 15px 35px rgba(239,68,68,.22)
-      }
-
-      .ferroventas-brand div{
-        display:flex;
-        flex-direction:column;
-        gap:4px
-      }
-
-      .ferroventas-brand strong{
-        color:#fff;
-        font-size:14px;
-        letter-spacing:.12em
-      }
-
-      .ferroventas-brand small{
-        color:#82978e;
-        font-size:10px
-      }
-
-      .ferroventas-copy h3{
-        margin:38px 0 16px;
-        font-size:clamp(38px,4.2vw,62px);
-        line-height:.98;
-        letter-spacing:-.055em
-      }
-
-      .ferroventas-copy > p{
-        max-width:700px;
-        color:#91a49c;
-        font-size:14px;
-        line-height:1.8
-      }
-
-      .ferroventas-tags{
-        display:flex;
-        flex-wrap:wrap;
-        gap:8px;
-        margin-top:28px
-      }
-
-      .ferroventas-tags span{
-        padding:9px 11px;
-        border:1px solid rgba(255,255,255,.08);
-        border-radius:999px;
-        background:rgba(255,255,255,.025);
-        color:#c5d4ce;
-        font-size:10px;
-        font-weight:800
-      }
-
-      .ferroventas-migration{
-        margin-top:28px;
-        padding:18px 20px;
-        border-left:3px solid #ef4444;
-        border-radius:0 14px 14px 0;
-        background:rgba(239,68,68,.055)
-      }
-
-      .ferroventas-migration b{
-        display:block;
-        color:#fff;
-        font-size:12px
-      }
-
-      .ferroventas-migration span{
-        display:block;
-        margin-top:6px;
-        color:#8fa49b;
-        font-size:11px;
-        line-height:1.6
-      }
-
-      .ferroventas-offer{
-        padding:34px;
-        border-color:rgba(239,68,68,.34)
-      }
-
-      .ferroventas-offer .kicker{
-        color:#f87171;
-        font-size:9px;
-        font-weight:950;
-        letter-spacing:.16em
-      }
-
-      .ferroventas-price{
-        margin-top:24px;
-        color:#fff;
-        font-size:54px;
-        line-height:1;
-        font-weight:950;
-        letter-spacing:-.055em
-      }
-
-      .ferroventas-offer > strong{
-        display:block;
-        margin-top:8px;
-        color:#aebdb7;
-        font-size:12px
-      }
-
-      .ferroventas-offer ul{
-        list-style:none;
-        padding:22px 0 14px;
-        margin:20px 0 0;
-        border-top:1px solid rgba(255,255,255,.06)
-      }
-
-      .ferroventas-offer li{
-        padding:7px 0;
-        color:#c5d1cc;
-        font-size:11px
-      }
-
-      .ferroventas-offer li::before{
-        content:"✓";
-        margin-right:9px;
-        color:#f87171;
-        font-weight:950
-      }
-
-      .ferroventas-note{
-        color:#748980;
-        font-size:10px;
-        line-height:1.6
-      }
-
-      .ferroventas-button{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        width:100%;
-        min-height:52px;
-        margin-top:22px;
-        border-radius:14px;
-        background:linear-gradient(135deg,#ef4444,#b91c1c);
-        color:white;
-        font-size:12px;
-        font-weight:900;
-        text-decoration:none;
-        box-shadow:0 15px 35px rgba(239,68,68,.15)
-      }
-
-      .ferroventas-button:hover{
-        transform:translateY(-2px);
-        box-shadow:0 18px 42px rgba(239,68,68,.24)
-      }
-
-      .ferroventas-demo-button{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        width:100%;
-        min-height:52px;
-        margin-top:10px;
-
-        border:1px solid rgba(255,255,255,.14);
-        border-radius:14px;
-
-        background:rgba(255,255,255,.035);
-        color:#fff;
-
-        font-size:12px;
-        font-weight:900;
-        text-decoration:none;
-
-        transition:.2s ease;
-      }
-
-      .ferroventas-demo-button:hover{
-        transform:translateY(-2px);
-        border-color:rgba(248,113,113,.45);
-        background:rgba(239,68,68,.08);
-      }
-
-      .ferroventas-demo-note{
-        display:block;
-        margin-top:9px;
-        text-align:center;
-
-        color:#83978f;
-        font-size:9px;
-        line-height:1.5;
-      }
-
-      .ferroventas-trust{
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        margin-top:18px;
-        border:1px solid var(--line);
-        border-radius:18px;
-        overflow:hidden
-      }
-
-      .ferroventas-trust div{
-        padding:20px 22px;
-        border-right:1px solid var(--line)
-      }
-
-      .ferroventas-trust div:last-child{
-        border-right:0
-      }
-
-      .ferroventas-trust strong,
-      .ferroventas-trust span{
-        display:block
-      }
-
-      .ferroventas-trust strong{
-        color:#fff;
-        font-size:12px
-      }
-
-      .ferroventas-trust span{
-        margin-top:5px;
-        color:#758b82;
-        font-size:10px
-      }
-
-      @media(max-width:980px){
-        .ferroventas-shell{
-          grid-template-columns:1fr
-        }
-      }
-
-      @media(max-width:680px){
-        .ferroventas-section{
-          padding-top:80px;
-          padding-bottom:90px
-        }
-
-        .ferroventas-copy,
-        .ferroventas-offer{
-          padding:25px 22px;
-          border-radius:22px
-        }
-
-        .ferroventas-price{
-          font-size:44px
-        }
-
-        .ferroventas-trust{
-          grid-template-columns:1fr
-        }
-
-        .ferroventas-trust div{
-          border-right:0;
-          border-bottom:1px solid var(--line)
-        }
+      .ferroventas-section { padding-top:110px; padding-bottom:120px; }
+      .ferroventas-shell { display:grid; grid-template-columns:minmax(0,1.32fr) minmax(320px,.68fr); gap:20px; align-items:stretch; }
+      .ferroventas-copy,.ferroventas-offer { border:1px solid var(--line); border-radius:28px; box-shadow:0 28px 80px rgba(0,0,0,.23); }
+      .ferroventas-copy { padding:38px; background:radial-gradient(circle at 100% 0%,rgba(239,68,68,.08),transparent 22rem),rgba(255,255,255,.014); }
+      .ferroventas-logo-panel { display:flex; justify-content:center; align-items:center; min-height:200px; padding:16px 25px; border:1px solid rgba(255,255,255,.11); border-radius:20px; background:linear-gradient(150deg,#f6f8fa,#e7edf2); }
+      .ferroventas-logo-panel img { display:block; width:min(100%,310px); max-height:230px; object-fit:contain; }
+      .ferroventas-kicker { display:block; margin-top:26px; color:#f58b92; font-size:10px; font-weight:900; letter-spacing:.14em; }
+      .ferroventas-copy h3 { margin:12px 0 16px; font-size:clamp(34px,4vw,56px); line-height:1.04; letter-spacing:-.05em; }
+      .ferroventas-copy > p { color:#a7b9b2; font-size:14px; line-height:1.85; max-width:680px; }
+      .ferroventas-benefits { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:28px; }
+      .ferroventas-benefit { padding:18px; border:1px solid rgba(255,255,255,.08); border-radius:16px; background:rgba(255,255,255,.025); }
+      .ferroventas-benefit strong { display:block; color:#f8fbfa; font-size:13px; line-height:1.4; }
+      .ferroventas-benefit p { margin:8px 0 0; color:#96aaa2; font-size:11px; line-height:1.65; }
+      .ferroventas-functions-title { margin:28px 0 12px; color:#fff; font-size:13px; }
+      .ferroventas-tags { display:flex; flex-wrap:wrap; gap:8px; }
+      .ferroventas-tags span { padding:9px 11px; border:1px solid rgba(255,255,255,.10); border-radius:999px; background:rgba(255,255,255,.025); color:#cbdad3; font-size:10px; font-weight:750; }
+      .ferroventas-migration { margin-top:27px; padding:18px 20px; border-left:3px solid #ef4444; border-radius:0 14px 14px 0; background:rgba(239,68,68,.055); }
+      .ferroventas-migration b { display:block; color:#fff; font-size:12px; }
+      .ferroventas-migration span { display:block; margin-top:6px; color:#a0b2aa; font-size:11px; line-height:1.65; }
+      .ferroventas-offer { padding:34px; border-color:rgba(239,68,68,.34); background:radial-gradient(circle at 100% 0%,rgba(239,68,68,.13),transparent 20rem),rgba(255,255,255,.014); }
+      .ferroventas-offer .kicker { color:#f87171; font-size:10px; font-weight:950; letter-spacing:.14em; }
+      .ferroventas-price { margin-top:22px; color:#fff; font-size:clamp(42px,4vw,54px); font-weight:950; line-height:1.1; letter-spacing:-.05em; }
+      .ferroventas-offer > strong { display:block; margin-top:8px; color:#c5d1cc; font-size:13px; }
+      .ferroventas-offer ul { list-style:none; padding:20px 0 12px; margin:20px 0 0; border-top:1px solid rgba(255,255,255,.08); }
+      .ferroventas-offer li { padding:9px 0; color:#c5d1cc; font-size:11px; line-height:1.55; }
+      .ferroventas-offer li::before { content:"✓"; margin-right:10px; color:#f87171; font-weight:950; }
+      .ferroventas-note { color:#92a69e; font-size:11px; line-height:1.7; }
+      .ferroventas-button,.ferroventas-demo-button { display:flex; align-items:center; justify-content:center; text-align:center; width:100%; min-height:52px; margin-top:14px; padding:12px; border-radius:14px; color:#fff; font-size:12px; font-weight:900; text-decoration:none; transition:transform .2s ease,background .2s ease; }
+      .ferroventas-button { background:linear-gradient(135deg,#ef4444,#b91c1c); box-shadow:0 15px 35px rgba(239,68,68,.15); margin-top:22px; }
+      .ferroventas-demo-button { border:1px solid rgba(255,255,255,.17); background:rgba(255,255,255,.045); }
+      .ferroventas-button:hover,.ferroventas-demo-button:hover { transform:translateY(-2px); }
+      .ferroventas-demo-button:hover { background:rgba(239,68,68,.09); }
+      .ferroventas-demo-note { display:block; margin-top:10px; text-align:center; color:#91a49d; font-size:10px; line-height:1.55; }
+      .ferroventas-trust { display:grid; grid-template-columns:repeat(3,1fr); margin-top:18px; border:1px solid var(--line); border-radius:18px; overflow:hidden; }
+      .ferroventas-trust div { padding:20px 22px; border-right:1px solid var(--line); }
+      .ferroventas-trust div:last-child { border-right:0; }
+      .ferroventas-trust strong,.ferroventas-trust span { display:block; }
+      .ferroventas-trust strong { color:#fff; font-size:12px; }
+      .ferroventas-trust span { margin-top:5px; color:#8ba198; font-size:10px; line-height:1.5; }
+      @media(max-width:980px) { .ferroventas-shell { grid-template-columns:1fr; } }
+      @media(max-width:680px) {
+        .ferroventas-section { padding-top:80px; padding-bottom:90px; }
+        .ferroventas-copy,.ferroventas-offer { padding:24px 20px; border-radius:22px; }
+        .ferroventas-logo-panel { min-height:160px; padding:12px; }
+        .ferroventas-logo-panel img { width:min(100%,270px); }
+        .ferroventas-benefits { grid-template-columns:1fr; }
+        .ferroventas-trust { grid-template-columns:1fr; }
+        .ferroventas-trust div { border-right:0; border-bottom:1px solid var(--line); }
+        .ferroventas-trust div:last-child { border-bottom:0; }
       }
     </style>
 
     <section class="section ferroventas-section" id="ferroventas">
-
       <div class="section-heading reveal">
         <div>
-          <p class="eyebrow">
-            <span></span> SOFTWARE PARA COMERCIOS
-          </p>
-
-          <h2>
-            FerroVentas.<br>
-            Tu negocio, ordenado.
-          </h2>
+          <p class="eyebrow"><span></span> SOFTWARE DE GESTIÓN PARA COMERCIOS</p>
+          <h2>FerroVentas.<br />Vendé más organizado.</h2>
         </div>
-
-        <p>
-          Sistema de gestión desarrollado por RVS para
-          ferreterías, pinturerías, corralones y comercios
-          que necesitan trabajar rápido y mantener el control
-          de su negocio.
-        </p>
+        <p>Una sola herramienta para atender el mostrador, controlar mercadería, administrar clientes y tener tu comercio bajo control.</p>
       </div>
 
       <div class="ferroventas-shell reveal">
-
         <div class="ferroventas-copy">
+          <div class="ferroventas-logo-panel">
+            <img src="./ferroventas-logo.png" alt="FerroVentas, sistema de gestión by RVS Desarrollador" loading="lazy" />
+          </div>
+          <span class="ferroventas-kicker">PENSADO PARA EL TRABAJO REAL DEL MOSTRADOR</span>
+          <h3>Menos tareas repetidas.<br />Más control para tu negocio.</h3>
+          <p>FerroVentas reúne ventas, presupuestos, artículos, stock, clientes, cuentas corrientes, proveedores, remitos y acopios en un mismo sistema. Diseñado especialmente para ferreterías, pinturerías, corralones y otros comercios que quieren trabajar de forma más ágil y ordenada.</p>
 
-          <div class="ferroventas-brand">
-            <img src="./ferroventas-logo.png" alt="FerroVentas" style="width:180px;max-width:100%;height:auto;object-fit:contain;">
-
-            <div>
-              <strong>FERROVENTAS</strong>
-              <small>by RVS Desarrollador</small>
-            </div>
+          <div class="ferroventas-benefits">
+            <div class="ferroventas-benefit"><strong>Del presupuesto a la venta</strong><p>Recuperá un presupuesto guardado y pasá sus artículos a la venta sin volver a cargarlos.</p></div>
+            <div class="ferroventas-benefit"><strong>Tu stock, siempre a mano</strong><p>Consultá artículos y existencias desde el mismo entorno donde vendés.</p></div>
+            <div class="ferroventas-benefit"><strong>Control de cuentas corrientes</strong><p>Organizá saldos de clientes y registrá los movimientos de cada cuenta.</p></div>
+            <div class="ferroventas-benefit"><strong>Una o varias computadoras</strong><p>Preparado para trabajar en red dentro del mismo comercio, con terminales autorizadas.</p></div>
           </div>
 
-          <h3>
-            Todo tu comercio.<br>
-              Bajo control.
-          </h3>
-
-         <p>
-            FerroVentas es un sistema de gestion comercial
-            desarrollado para ferreterias, pinturerias,
-            corralones y otros comercios.
-
-            Administra ventas, presupuestos, stock, clientes,
-            cuentas corrientes, proveedores, remitos y acopios
-            desde una sola plataforma.
-
-            Trabaja en una o varias computadoras del mismo
-            comercio, con usuarios autorizados, copias de
-            seguridad y control de licencias.
-       </p>
-
+          <h4 class="ferroventas-functions-title">Funciones para el día a día</h4>
           <div class="ferroventas-tags">
-            <span>Ventas rápidas</span>
-            <span>Presupuestos</span>
-            <span>Stock</span>
-            <span>Cuentas corrientes</span>
-            <span>Proveedores</span>
-            <span>Acopios</span>
-            <span>Repartos</span>
-            <span>Copias de seguridad</span>
+            <span>Ventas rápidas</span><span>Presupuestos guardados</span>
+            <span>Presupuestos convertibles en ventas</span><span>Stock y artículos</span>
+            <span>Clientes y cuentas corrientes</span><span>Precios para efectivo y tarjeta</span>
+            <span>Proveedores</span><span>Acopios de materiales</span>
+            <span>Remitos con firma y aclaración</span><span>Organización de repartos</span>
+            <span>Comprobantes personalizables</span><span>Usuarios y permisos</span>
+            <span>Copias de seguridad</span><span>Trabajo en red</span>
+            <span>Licencia por comercio</span>
           </div>
-
           <div class="ferroventas-migration">
-            <b>Migración desde tu sistema actual</b>
-
-            <span>
-              Podemos importar productos, precios, stock,
-              clientes, proveedores y saldos desde Excel,
-              CSV u otros formatos compatibles.
-            </span>
+            <b>¿Ya usás otro sistema? Te ayudamos con la transición.</b>
+            <span>Podemos migrar artículos, precios, stock, clientes, proveedores y saldos desde archivos Excel, CSV u otros formatos compatibles, según el estado y la estructura de los datos.</span>
           </div>
-
         </div>
 
         <aside class="ferroventas-offer">
-
-          <span class="kicker">
-            LICENCIA PERMANENTE
-          </span>
-
-          <div class="ferroventas-price">
-            $490.000
-          </div>
-
-          <strong>Pago único</strong>
-
+          <span class="kicker">LICENCIA PERMANENTE</span>
+          <div class="ferroventas-price">$490.000</div>
+          <strong>Pago único · Para un comercio</strong>
           <ul>
             <li>Licencia para un comercio</li>
             <li>PC principal + hasta 2 terminales</li>
@@ -623,57 +338,17 @@
             <li>Copias de seguridad</li>
             <li>30 días de soporte remoto inicial</li>
           </ul>
-
-          <p class="ferroventas-note">
-            Sin abono mensual obligatorio.
-            Terminales adicionales, migraciones especiales,
-            trabajos personalizados y visitas presenciales
-            se cotizan por separado.
-          </p>
-
-          <a
-            class="ferroventas-button"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://wa.me/542236955735?text=Hola%20RVS%20Desarrollador%2C%20quiero%20consultar%20por%20FerroVentas.%20Vi%20la%20licencia%20permanente%20de%20%24490.000."
-          >
-            Consultar por FerroVentas →
-          </a>
-
-          <a
-            class="ferroventas-demo-button"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://wa.me/542236955735?text=Hola%20RVS%20Desarrollador%2C%20quiero%20solicitar%20la%20DEMO%20gratis%20de%207%20dias%20de%20FerroVentas."
-          >
-            Probar DEMO gratis · 7 días →
-          </a>
-
-          <small class="ferroventas-demo-note">
-            Prueba completa en 1 PC · Sin compromiso de compra
-          </small>
-
+          <p class="ferroventas-note">Sin abono mensual obligatorio. Terminales adicionales, migraciones especiales, trabajos personalizados y visitas presenciales se cotizan por separado.</p>
+          <a class="ferroventas-button" target="_blank" rel="noopener noreferrer" href="https://wa.me/542236955735?text=Hola%20RVS%20Desarrollador%2C%20quiero%20consultar%20por%20FerroVentas.%20Vi%20la%20licencia%20permanente%20de%20%24490.000.">Consultar por FerroVentas →</a>
+          <a class="ferroventas-demo-button" target="_blank" rel="noopener noreferrer" href="https://wa.me/542236955735?text=Hola%20RVS%20Desarrollador%2C%20quiero%20solicitar%20la%20DEMO%20gratis%20de%207%20dias%20de%20FerroVentas.">Probar DEMO gratis · 7 días →</a>
+          <small class="ferroventas-demo-note">Prueba completa en 1 PC · Sin compromiso de compra</small>
         </aside>
-
       </div>
-
       <div class="ferroventas-trust reveal">
-        <div>
-          <strong>Local</strong>
-          <span>Tus datos quedan en tu negocio</span>
-        </div>
-
-        <div>
-          <strong>En red</strong>
-          <span>Principal + terminales autorizadas</span>
-        </div>
-
-        <div>
-          <strong>Adaptable</strong>
-          <span>Migración y configuración inicial</span>
-        </div>
+        <div><strong>Datos locales</strong><span>La información de tu negocio queda en tu comercio</span></div>
+        <div><strong>Trabajo en red</strong><span>PC principal y terminales autorizadas</span></div>
+        <div><strong>Adaptación inicial</strong><span>Configuración y migración básica incluidas</span></div>
       </div>
-
     </section>
 
     <section class="section plans-section" id="planes">
